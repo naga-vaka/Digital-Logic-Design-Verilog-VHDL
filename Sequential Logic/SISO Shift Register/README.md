@@ -20,9 +20,8 @@ A Serial-In Serial-Out (SISO) shift register receives data sequentially one bit 
 ## Shifting Operation
 
 On each rising clock edge:
-$$\text{Shift Vector} \leftarrow \text{Shift Vector}(2 \text{ downto } 0) \ \ \& \ \ Si$$
-$$\text{Output } So \leftarrow \text{Shift Vector}(3)$$
-
+* `shift_reg <= shift_reg(2 downto 0) & Si;`
+* `So <= shift_reg(3);`
 ---
 
 ## RTL Schematic
